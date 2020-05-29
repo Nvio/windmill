@@ -5,7 +5,7 @@ const fs = require('fs')
 const app = express()
 const port = 9991
 
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
   const dirPath = path.join(process.cwd(), 'tailwind-lib')
   const fileNames = fs.readdirSync(dirPath)
 

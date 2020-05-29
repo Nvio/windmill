@@ -1,18 +1,22 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div v-if="libraryItems">
+    <prism v-for="(item, key) in libraryItems" :key="key">{{ item }}</prism>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import axios from "axios";
+import Prism from "vue-prism-component";
 
 export default {
-  name: "Home",
-  components: {
-    HelloWorld
-  }
+  data: () => ({
+    libraryItems: null
+  }),
+  mounted() {
+    axios.get("/api").then(({ data }) => {
+      this.libraryItems = data;
+    });
+  },
+  components: { Prism }
 };
 </script>

@@ -3,6 +3,8 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
+import 'prismjs'
+import 'prismjs/themes/prism.css'
 
 Vue.config.productionTip = false;
 
