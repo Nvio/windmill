@@ -1,0 +1,9 @@
+{
+  "name": "tailwind-library-manager",
+  "version": "0.1.0",
+  "author": "Steven Yung <nvio@fastmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
+}

@@ -4,9 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "tailwind-lib:dev": "node ../../bin/start-tailwind-lib"
+    "tailwind-lib:dev": "node ../../packages/@tlm/cli/bin/start-tailwind-lib"
   },
-  "dependencies": {
-    "@vue/cli-plugin-babel": "^4.4.1"
-  }
+  "dependencies": {}
 }
