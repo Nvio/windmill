@@ -1,9 +1,13 @@
 {
   "name": "@tlm/cli",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
   "bin": {
     "start-tailwind-lib": "./bin/start-tailwind-lib"
   },
+  "dependencies": {
+    "@tlm/client": "^0.1.0",
+    "@tlm/server": "^0.1.0"
+  }
 }
