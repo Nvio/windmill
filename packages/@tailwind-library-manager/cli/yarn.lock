@@ -10,14 +10,6 @@
     postcss "7.0.28"
     purgecss "^2.2.0"
 
-"@tailwind-library-manager/cli@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@tailwind-library-manager/cli/-/cli-0.1.1.tgz#3166039f038a3e2c5a86974fb3c40d6c4a352a40"
-  integrity sha512-/rQ7d0mfswlvxo76wdk3r3JNWAdNJtwEv0aw6MqOyqDfB90CMnePkG+23P+dkhtq0YsBXrXvUa6DL7e5Bv8WLg==
-  dependencies:
-    "@tailwind-library-manager/client" "^0.1.1"
-    "@tailwind-library-manager/server" "^0.1.1"
-
 "@tailwind-library-manager/client@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@tailwind-library-manager/client/-/client-0.1.1.tgz#1cbe5e83dd31758d12c8ebfdbe81104c655719cb"

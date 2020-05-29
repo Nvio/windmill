@@ -1,6 +1,9 @@
 {
   "name": "@tailwind-library-manager/client",
   "version": "0.1.1",
+  "bin": {
+    "start-tailwind-lib-client": "./bin/start"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -15,9 +18,7 @@
     "vue": "^2.6.11",
     "vue-prism-component": "^1.2.0",
     "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
-  },
-  "devDependencies": {
+    "vuex": "^3.4.0",
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
     "@vue/cli-plugin-pwa": "~4.4.0",
