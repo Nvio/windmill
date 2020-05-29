@@ -5,5 +5,8 @@
   "private": true,
   "scripts": {
     "tailwind-lib:dev": "node ../../bin/start-tailwind-lib"
+  },
+  "dependencies": {
+    "@vue/cli-plugin-babel": "^4.4.1"
   }
 }
