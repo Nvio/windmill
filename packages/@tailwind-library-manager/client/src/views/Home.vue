@@ -1,12 +1,12 @@
 <template>
   <div v-if="libraryItems">
-    <Prism language="html" v-for="(item, key) in libraryItems" :key="key">{{ item }}</Prism>
+    <LibraryItem v-for="(item, key) in libraryItems" :key="key" :code="item" />
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import Prism from "vue-prism-component";
+import LibraryItem from "@/components/LibraryItem";
 
 export default {
   data: () => ({
@@ -17,6 +17,6 @@ export default {
       this.libraryItems = data;
     });
   },
-  components: { Prism }
+  components: { LibraryItem }
 };
 </script>
