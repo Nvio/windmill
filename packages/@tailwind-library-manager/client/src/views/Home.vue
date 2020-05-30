@@ -1,6 +1,6 @@
 <template>
   <div v-if="libraryItems">
-    <prism v-for="(item, key) in libraryItems" :key="key">{{ item }}</prism>
+    <Prism language="html" v-for="(item, key) in libraryItems" :key="key">{{ item }}</Prism>
   </div>
 </template>
 

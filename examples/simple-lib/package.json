@@ -7,8 +7,6 @@
     "tailwind-lib:dev": "node ../../packages/@tailwind-library-manager/cli/bin/start-tailwind-lib"
   },
   "dependencies": {
-    "@tailwind-library-manager/cli": "^0.1.1",
-    "@tailwind-library-manager/client": "^0.1.1",
-    "@tailwind-library-manager/server": "^0.1.1"
+    "@tailwind-library-manager/cli": "latest"
   }
 }
