@@ -5,7 +5,7 @@ import router from "./router";
 import store from "./store";
 import "./assets/tailwind.css";
 import 'prismjs'
-import 'prismjs/themes/prism.css'
+import 'prismjs/themes/prism-okaidia.css'
 
 Vue.config.productionTip = false;
 
