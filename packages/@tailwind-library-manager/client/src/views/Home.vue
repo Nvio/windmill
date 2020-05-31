@@ -1,6 +1,6 @@
 <template>
   <div v-if="libraryItems" class="py-4">
-    <LibraryItem v-for="(item, key) in libraryItems" :key="key" :code="item" />
+    <LibraryItem v-for="(item, key) in libraryItems" :key="key" :code="item" class="mb-16" />
   </div>
 </template>
 
