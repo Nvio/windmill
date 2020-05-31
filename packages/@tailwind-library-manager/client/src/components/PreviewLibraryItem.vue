@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative pr-4">
     <iframe
       ref="preview"
       @load="updateHeight"
