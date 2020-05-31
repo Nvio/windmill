@@ -57,6 +57,7 @@ export default {
     resize(change) {
       this.widthChange = change;
       this.isResizing = true;
+      this.updateHeight();
     },
     endResize() {
       this.startingWidthChange += this.widthChange;
