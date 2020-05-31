@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border-l bg-gray-100 absolute right-0 inset-y-0 flex items-center w-4"
+    class="border-l bg-gray-100 absolute right-0 inset-y-0 flex items-center w-4 cursor-move"
     @mousedown="start"
   >
     <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
