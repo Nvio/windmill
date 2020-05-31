@@ -4,7 +4,8 @@
       ref="preview"
       @load="updateHeight"
       :srcdoc="html"
-      class="w-full h-auto bg-white"
+      class="w-full h-auto bg-white pointer-events-none"
+      :class="{'pointer-events-none': isResizing, 'pointer-events-auto': !isResizing}"
       :style="{ width, height }"
     />
 
@@ -20,7 +21,8 @@ export default {
   data: () => ({
     widthChange: 0,
     startingWidthChange: 0,
-    height: "150px"
+    height: "150px",
+    isResizing: false
   }),
   computed: {
     width() {
@@ -53,11 +55,13 @@ export default {
         this.$refs.preview.contentWindow.document.body.scrollHeight + "px";
     },
     resize(change) {
-      return (this.widthChange = change);
+      this.widthChange = change;
+      this.isResizing = true;
     },
     endResize() {
       this.startingWidthChange += this.widthChange;
       this.widthChange = 0;
+      this.isResizing = false;
     }
   },
   components: { ResizeHandle }
