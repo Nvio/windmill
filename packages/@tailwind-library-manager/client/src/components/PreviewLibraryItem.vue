@@ -5,9 +5,10 @@
       @load="updateHeight"
       :srcdoc="html"
       class="w-full h-auto"
-      :style="{ height }"
+      :style="{ width, height }"
     />
-    <ResizeHandle />
+
+    <ResizeHandle @resize="resize" @end="endResize" :style="{right: `${-change}px`}" />
   </div>
 </template>
 
@@ -17,9 +18,14 @@ import ResizeHandle from "@/components/ResizeHandle";
 export default {
   props: ["code"],
   data: () => ({
+    widthChange: 0,
+    startingWidthChange: 0,
     height: "150px"
   }),
   computed: {
+    width() {
+      return `calc(100% + ${this.change}px)`;
+    },
     html() {
       return `
       <!DOCTYPE html>
@@ -35,12 +41,23 @@ export default {
           </body>
         </html>
       `;
+    },
+    change() {
+      const change = this.startingWidthChange + this.widthChange;
+      return change <= 0 ? change : 0;
     }
   },
   methods: {
     updateHeight() {
       this.height =
         this.$refs.preview.contentWindow.document.body.scrollHeight + "px";
+    },
+    resize(change) {
+      return (this.widthChange = change);
+    },
+    endResize() {
+      this.startingWidthChange += this.widthChange;
+      this.widthChange = 0;
     }
   },
   components: { ResizeHandle }
