@@ -1,10 +1,10 @@
 <template>
-  <div class="relative pr-4">
+  <div class="relative pr-4 bg-gray-500">
     <iframe
       ref="preview"
       @load="updateHeight"
       :srcdoc="html"
-      class="w-full h-auto"
+      class="w-full h-auto bg-white"
       :style="{ width, height }"
     />
 
