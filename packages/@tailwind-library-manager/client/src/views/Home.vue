@@ -1,5 +1,5 @@
 <template>
-  <div v-if="libraryItems">
+  <div v-if="libraryItems" class="py-4">
     <LibraryItem v-for="(item, key) in libraryItems" :key="key" :code="item" />
   </div>
 </template>

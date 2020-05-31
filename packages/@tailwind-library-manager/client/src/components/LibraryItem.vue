@@ -1,27 +1,28 @@
 <template>
-  <div class="border-2">
-    <div class="flex justify-between px-2">
+  <div class="border rounded-md">
+    <div class="flex justify-between px-6 py-4 border-b">
       <div>
-        <span>Test title</span>
+        <span class="text-xl">Test title</span>
       </div>
 
-      <div>
-        <Button @click="mode = 'preview'">Preview</Button>
-        <Button @click="mode = 'code'">Code</Button>
-        <span>|</span>
-        <Button @click="copy">{{ hasRecentlyCopied ? 'Copied!' : 'Copy' }}</Button>
+      <div class="flex items-center">
+        <ToggleButton @click="mode = 'preview'" :isActive="mode === 'preview'">Preview</ToggleButton>
+        <ToggleButton @click="mode = 'code'" :isActive="mode === 'code'">Code</ToggleButton>
+        <div class="border-r h-5 mx-4" />
+        <WhiteButton @click="copy">{{ hasRecentlyCopied ? 'Copied!' : 'Copy' }}</WhiteButton>
       </div>
     </div>
 
     <PreviewLibrabryItem v-if="mode === 'preview'" :code="code" />
-    <Prism v-if="mode === 'code'" language="html">{{ code }}</Prism>
+    <Code v-if="mode === 'code'">{{ code }}</Code>
   </div>
 </template>
 
 <script>
-import Prism from "vue-prism-component";
-import Button from "@/components/Button";
+import ToggleButton from "@/components/ToggleButton";
 import PreviewLibrabryItem from "@/components/PreviewLibraryItem";
+import WhiteButton from "@/components/WhiteButton";
+import Code from "@/components/Code";
 
 export default {
   props: ["code"],
@@ -39,6 +40,6 @@ export default {
     }
   },
 
-  components: { Prism, Button, PreviewLibrabryItem }
+  components: { ToggleButton, PreviewLibrabryItem, WhiteButton, Code }
 };
 </script>
