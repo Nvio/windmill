@@ -2,7 +2,7 @@
   <div class="relative pr-4 bg-gray-500">
     <iframe
       ref="preview"
-      @load="updateHeight"
+      @load="handleLoadedPreview"
       :srcdoc="html"
       class="w-full h-auto bg-white pointer-events-none"
       :class="{'pointer-events-none': isResizing, 'pointer-events-auto': !isResizing}"
@@ -63,6 +63,17 @@ export default {
       this.startingWidthChange += this.widthChange;
       this.widthChange = 0;
       this.isResizing = false;
+    },
+    handleLoadedPreview() {
+      this.updateHeight();
+      // disable iframe links
+      this.$refs.preview.contentWindow.document.body
+        .querySelectorAll("a")
+        .forEach(element => {
+          element.addEventListener("click", e => {
+            e.preventDefault();
+          });
+        });
     }
   },
   components: { ResizeHandle }
