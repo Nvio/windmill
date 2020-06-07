@@ -16,7 +16,6 @@ import LibraryItem from "@/components/LibraryItem";
 
 export default {
   data: () => ({
-    // libraryItems: null
     metadata: null
   }),
   mounted() {

@@ -16,13 +16,6 @@ metadata.components = metadata.components.map(({ name, path: filePath }) => {
 })
 
 app.get('/', (req, res) => {
-  // const fileNames = fs.readdirSync(dirPath)
-
-  // const data = fileNames.filter(fileName => {
-  //   return !!fileName.match(/\.html$/g);
-  // }).map(fileName => {
-  //   return fs.readFileSync(path.join(dirPath, fileName)).toString()
-  // })
   res.send(metadata)
 })
 
