@@ -1,0 +1,13 @@
+{
+  "name": "Simple example library",
+  "components": [
+    {
+      "name": "Hero Section",
+      "path": "./hero-section.html"
+    },
+    {
+      "name": "Tuple Navbar",
+      "path": "./navbar.html"
+    }
+  ]
+}

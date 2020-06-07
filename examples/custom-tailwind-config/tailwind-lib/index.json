@@ -1,0 +1,9 @@
+{
+  "name": "Custom Tailwind Config Example",
+  "components": [
+    {
+      "name": "CTA Section",
+      "path": "./cta-section.html"
+    }
+  ]
+}

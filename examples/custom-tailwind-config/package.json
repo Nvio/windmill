@@ -1,0 +1,12 @@
+{
+  "name": "custom-tailwind-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "tailwind-lib:dev": "node ../../packages/@tailwind-library-manager/cli/bin/start-tailwind-lib"
+  },
+  "dependencies": {
+    "@tailwind-library-manager/cli": "latest"
+  }
+}
