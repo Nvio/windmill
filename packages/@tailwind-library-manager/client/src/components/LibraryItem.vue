@@ -2,7 +2,7 @@
   <div class="border rounded-md">
     <div class="flex justify-between px-6 py-4 border-b">
       <div>
-        <span class="text-xl">Test title</span>
+        <span class="text-xl">{{ name }}</span>
       </div>
 
       <div class="flex items-center">
@@ -25,7 +25,7 @@ import WhiteButton from "@/components/WhiteButton";
 import Code from "@/components/Code";
 
 export default {
-  props: ["code"],
+  props: ["name", "code"],
 
   data: () => ({
     mode: "preview",
