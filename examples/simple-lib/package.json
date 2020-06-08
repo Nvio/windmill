@@ -4,7 +4,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "tailwind-lib:dev": "node ../../packages/@tailwind-library-manager/cli/bin/start-tailwind-lib"
+    "tailwind-server:dev": "node ../../packages/@tailwind-library-manager/server/index.js",
+    "tailwind-client:dev": "node ../../packages/@tailwind-library-manager/client/bin/start"
   },
   "dependencies": {
     "@tailwind-library-manager/cli": "latest"
