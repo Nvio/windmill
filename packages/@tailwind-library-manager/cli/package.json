@@ -1,13 +1,13 @@
 {
   "name": "@tailwind-library-manager/cli",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "index.js",
   "license": "MIT",
   "bin": {
     "start-tailwind-lib": "./bin/start-tailwind-lib"
   },
   "dependencies": {
-    "@tailwind-library-manager/client": "^0.1.4",
+    "@tailwind-library-manager/client": "^0.1.5",
     "@tailwind-library-manager/server": "^0.1.3"
   }
 }
