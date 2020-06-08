@@ -6,10 +6,16 @@
       </div>
 
       <div class="flex items-center">
-        <ToggleButton @click="mode = 'preview'" :isActive="mode === 'preview'">Preview</ToggleButton>
-        <ToggleButton @click="mode = 'code'" :isActive="mode === 'code'">Code</ToggleButton>
+        <ToggleButton @click="mode = 'preview'" :isActive="mode === 'preview'"
+          >Preview</ToggleButton
+        >
+        <ToggleButton @click="mode = 'code'" :isActive="mode === 'code'"
+          >Code</ToggleButton
+        >
         <div class="border-r h-5 mx-4" />
-        <WhiteButton @click="copy">{{ hasRecentlyCopied ? 'Copied!' : 'Copy' }}</WhiteButton>
+        <WhiteButton @click="copy">{{
+          hasRecentlyCopied ? "Copied!" : "Copy"
+        }}</WhiteButton>
       </div>
     </div>
 

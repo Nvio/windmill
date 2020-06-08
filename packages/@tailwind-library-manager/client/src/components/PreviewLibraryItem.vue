@@ -5,11 +5,18 @@
       @load="handleLoadedPreview"
       :srcdoc="html"
       class="w-full h-auto bg-white pointer-events-none"
-      :class="{'pointer-events-none': isResizing, 'pointer-events-auto': !isResizing}"
+      :class="{
+        'pointer-events-none': isResizing,
+        'pointer-events-auto': !isResizing
+      }"
       :style="{ width, height }"
     />
 
-    <ResizeHandle @resize="resize" @end="endResize" :style="{right: `${-change}px`}" />
+    <ResizeHandle
+      @resize="resize"
+      @end="endResize"
+      :style="{ right: `${-change}px` }"
+    />
   </div>
 </template>
 
