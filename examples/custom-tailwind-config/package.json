@@ -5,9 +5,13 @@
   "license": "MIT",
   "scripts": {
     "tailwind-server:dev": "node ../../packages/@tailwind-library-manager/server/index.js",
-    "tailwind-client:dev": "node ../../packages/@tailwind-library-manager/client/bin/start"
+    "tailwind-client:dev": "node ../../packages/@tailwind-library-manager/client/bin/start",
+    "tailwind:build": "postcss css/tailwind.css -o public/tailwind.css"
   },
   "dependencies": {
-    "@tailwind-library-manager/cli": "latest"
+    "@tailwind-library-manager/cli": "latest",
+    "autoprefixer": "^9.8.0",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.4.6"
   }
 }

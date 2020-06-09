@@ -12,11 +12,7 @@
       :style="{ width, height }"
     />
 
-    <ResizeHandle
-      @resize="resize"
-      @end="endResize"
-      :style="{ right: `${-change}px` }"
-    />
+    <ResizeHandle @resize="resize" @end="endResize" :style="{ right: `${-change}px` }" />
   </div>
 </template>
 
@@ -43,7 +39,7 @@ export default {
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width,initial-scale=1.0">
-            <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+            <link href="http://localhost:9991/styles.css" rel="stylesheet">
           </head>
           <body>
             ${this.code}

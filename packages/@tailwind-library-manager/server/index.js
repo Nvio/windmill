@@ -19,4 +19,11 @@ app.get('/', (req, res) => {
   res.send(metadata)
 })
 
+app.get('/styles.css', (req, res) => {
+  const customFilePath = path.join(process.cwd(), 'public', 'tailwind.css');
+  fs.existsSync(customFilePath)
+    ? res.sendFile(customFilePath)
+    : res.sendFile('https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css');
+})
+
 app.listen(port, () => console.log(`Server running at http://localhost:${port}`))
