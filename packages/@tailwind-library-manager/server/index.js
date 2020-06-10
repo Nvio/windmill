@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const fs = require('fs')
+const request = require('request')
 
 const app = express()
 const port = 9991
@@ -23,7 +24,7 @@ app.get('/styles.css', (req, res) => {
   const customFilePath = path.join(process.cwd(), 'public', 'tailwind.css');
   fs.existsSync(customFilePath)
     ? res.sendFile(customFilePath)
-    : res.sendFile('https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css');
+    : request('https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css').pipe(res);
 })
 
 app.listen(port, () => console.log(`Server running at http://localhost:${port}`))
