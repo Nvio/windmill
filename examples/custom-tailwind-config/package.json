@@ -9,9 +9,6 @@
     "tailwind:build": "postcss css/tailwind.css -o public/tailwind.css"
   },
   "dependencies": {
-    "@tailwind-library-manager/cli": "latest",
-    "autoprefixer": "^9.8.0",
-    "postcss-cli": "^7.1.1",
-    "tailwindcss": "^1.4.6"
+    "@tailwind-library-manager/cli": "latest"
   }
 }

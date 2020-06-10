@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const fs = require('fs')
 const request = require('request')
+const postcss = require('postcss');
 
 const app = express()
 const port = 9991
@@ -21,9 +22,17 @@ app.get('/', (req, res) => {
 })
 
 app.get('/styles.css', (req, res) => {
-  const customFilePath = path.join(process.cwd(), 'public', 'tailwind.css');
+  const customFilePath = path.join(dirPath, 'tailwind.css');
   fs.existsSync(customFilePath)
-    ? res.sendFile(customFilePath)
+    ? fs.readFile(customFilePath, (err, css) => {
+      postcss([
+        require('tailwindcss'),
+        require('autoprefixer'),
+      ]).process(css).then(result => {
+        res.setHeader('Content-Type', 'text/css');
+        res.send(result.css)
+      })
+    })
     : request('https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css').pipe(res);
 })
 
