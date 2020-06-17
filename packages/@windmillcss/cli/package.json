@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "bin": {
-    "start-tailwind-lib": "./bin/start-tailwind-lib"
+    "windmill": "./bin/windmill.js"
   },
   "dependencies": {
     "@windmillcss/client": "^0.1.5",

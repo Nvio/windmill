@@ -4,8 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "windmill:server": "node ../../packages/@windmillcss/server/index.js",
-    "windmill:client": "node ../../packages/@windmillcss/client/bin/start"
+    "windmill": "windmill"
   },
   "dependencies": {
     "@windmillcss/cli": "latest"
