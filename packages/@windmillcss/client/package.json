@@ -1,5 +1,5 @@
 {
-  "name": "@tailwind-library-manager/client",
+  "name": "@windmillcss/client",
   "version": "0.1.5",
   "scripts": {
     "serve": "vue-cli-service serve",

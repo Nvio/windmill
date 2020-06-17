@@ -4,11 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "tailwind-server:dev": "node ../../packages/@tailwind-library-manager/server/index.js",
-    "tailwind-client:dev": "node ../../packages/@tailwind-library-manager/client/bin/start",
+    "tailwind-server:dev": "node ../../packages/@windmillcss/server/index.js",
+    "tailwind-client:dev": "node ../../packages/@windmillcss/client/bin/start",
     "tailwind:build": "postcss css/tailwind.css -o public/tailwind.css"
   },
   "dependencies": {
-    "@tailwind-library-manager/cli": "latest"
+    "@windmillcss/cli": "latest"
   }
 }
