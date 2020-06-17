@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "tailwind-server:dev": "node ../../packages/@windmillcss/server/index.js",
-    "tailwind-client:dev": "node ../../packages/@windmillcss/client/bin/start",
+    "windmill:server": "node ../../packages/@windmillcss/server/index.js",
+    "windmill:client": "node ../../packages/@windmillcss/client/bin/start",
     "tailwind:build": "postcss css/tailwind.css -o public/tailwind.css"
   },
   "dependencies": {
