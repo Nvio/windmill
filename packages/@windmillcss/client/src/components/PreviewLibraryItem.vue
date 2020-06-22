@@ -1,5 +1,5 @@
 <template>
-  <div class="relative pr-4 bg-gray-500 w-full h-full">
+  <div class="relative pr-4 bg-gray-500">
     <iframe
       ref="preview"
       @load="handleLoadedPreview"
@@ -41,7 +41,7 @@ export default {
             <meta name="viewport" content="width=device-width,initial-scale=1.0">
             <link href="http://localhost:9991/styles.css" rel="stylesheet">
           </head>
-          <body>
+          <body class="py-4 px-2">
             ${this.code}
           </body>
         </html>
