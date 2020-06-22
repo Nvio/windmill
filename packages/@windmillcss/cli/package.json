@@ -7,7 +7,7 @@
     "windmill": "./bin/windmill.js"
   },
   "dependencies": {
-    "@windmillcss/client": "^0.1.6",
-    "@windmillcss/server": "^0.1.6"
+    "@windmillcss/client": "latest",
+    "@windmillcss/server": "latest"
   }
 }
