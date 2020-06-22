@@ -1,9 +1,13 @@
 {
-  "name": "Simple example library",
+  "name": "Simple Windmill Example Library",
   "components": [
     {
       "name": "Marketing Card",
       "path": "./marketing-card.html"
+    },
+    {
+      "name": "Chat notification",
+      "path": "./chat-notification.html"
     }
   ]
 }

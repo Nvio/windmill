@@ -13,6 +13,7 @@ const metadata = require(dirPath);
 metadata.components = metadata.components.map(({ name, path: filePath }) => {
   return {
     name,
+    fileName: path.basename(filePath),
     content: fs.readFileSync(path.join(dirPath, filePath)).toString(),
   }
 })

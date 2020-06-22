@@ -8,7 +8,13 @@ import "prismjs";
 import "prismjs/themes/prism-okaidia.css";
 import VueClipboard from "vue-clipboard2";
 import "./assets/tailwind.css";
-import "./assets/tailwind.css";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFile } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faFile);
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false;
 

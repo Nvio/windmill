@@ -1,5 +1,5 @@
 <template>
-  <div class="relative pr-4 bg-gray-500">
+  <div class="relative pr-4 bg-gray-500 w-full h-full">
     <iframe
       ref="preview"
       @load="handleLoadedPreview"
