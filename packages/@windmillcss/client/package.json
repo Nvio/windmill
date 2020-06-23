@@ -36,7 +36,7 @@
     "vuex": "^3.4.0"
   },
   "bin": {
-    "start-tailwind-lib-client": "./bin/start"
+    "windmill-client": "./bin/windmill-client"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"

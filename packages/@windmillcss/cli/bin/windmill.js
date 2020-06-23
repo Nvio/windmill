@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // Run client
-require('@windmillcss/client/bin/start')
+require('@windmillcss/client/bin/windmill-client')
 
 // Run server
-require('@windmillcss/server')
+require('@windmillcss/server/bin/windmill-server')
