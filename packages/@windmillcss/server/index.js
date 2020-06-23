@@ -7,7 +7,7 @@ const postcss = require('postcss');
 const app = express()
 const port = 9991
 
-const dirPath = path.join(process.cwd(), 'tailwind-lib')
+const dirPath = path.join(process.cwd(), 'src')
 const metadata = require(dirPath);
 
 metadata.components = metadata.components.map(({ name, path: filePath }) => {
