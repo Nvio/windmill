@@ -16,15 +16,15 @@
               :to="component.fileName"
               v-slot="{href, navigate, isActive}"
             >
-              <li
-                class="text-gray-500 w-full rounded-md px-2 py-1 mb-2"
-                :class="{'bg-blue-200 text-blue-600': isActive}"
-              >
-                <a :href="href" @click="navigate">
+              <a :href="href" @click="navigate">
+                <li
+                  class="text-gray-500 w-full rounded-md px-2 py-1 mb-2"
+                  :class="{'bg-blue-200 text-blue-600': isActive}"
+                >
                   <font-awesome-icon icon="file" class="mr-2" />
                   <span>{{ component.name }}</span>
-                </a>
-              </li>
+                </li>
+              </a>
             </router-link>
           </ul>
         </div>
