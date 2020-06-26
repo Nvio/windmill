@@ -3,22 +3,26 @@ const path = require('path')
 const fs = require('fs')
 const request = require('request')
 const postcss = require('postcss');
+const chokidar = require('chokidar');
 
 const app = express()
 const port = 9991
 
+const http = require('http').createServer(app);
+const io = require('socket.io')(http);
+
 const dirPath = path.join(process.cwd(), 'src')
-const metadata = require(dirPath);
-
-metadata.components = metadata.components.map(({ name, path: filePath }) => {
-  return {
-    name,
-    fileName: path.basename(filePath),
-    content: fs.readFileSync(path.join(dirPath, filePath)).toString(),
-  }
-})
-
 app.get('/', (req, res) => {
+  const metadata = { ...require(dirPath) }
+
+  metadata.components = metadata.components.map(({ name, path: filePath }) => {
+    return {
+      name,
+      fileName: path.basename(filePath),
+      content: fs.readFileSync(path.join(dirPath, filePath)).toString(),
+    }
+  })
+
   res.send(metadata)
 })
 
@@ -37,4 +41,10 @@ app.get('/styles.css', (req, res) => {
     : request('https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css').pipe(res);
 })
 
-app.listen(port, () => console.log(`Server running at http://localhost:${port}`))
+io.on('connection', (socket) => {
+  chokidar.watch(process.cwd()).on('change', (event, path) => {
+    socket.emit('change');
+  });
+});
+
+http.listen(port, () => console.log(`Server running at http://localhost:${port}`))
