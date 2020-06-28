@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@windmillcss/client": "latest",
-    "@windmillcss/server": "latest"
+    "@windmillcss/server": "latest",
+    "commander": "^5.1.0"
   }
 }
