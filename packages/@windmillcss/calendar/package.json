@@ -1,11 +1,11 @@
 {
   "name": "@windmillcss/calendar",
-  "version": "1.0.0",
+  "version": "0.1.7",
   "license": "MIT",
   "scripts": {
     "windmill": "windmill"
   },
   "dependencies": {
-    "@windmillcss/cli": "^0.1"
+    "@windmillcss/cli": "^0.1.7"
   }
 }
