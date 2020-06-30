@@ -36,6 +36,9 @@ async function create(projectName) {
     data.name = projectName;
     return data;
   });
+
+  console.log("Ready to go!");
+  console.log(`Run: cd ${projectName}; npm install`);
 }
 
 module.exports = (...args) => {
