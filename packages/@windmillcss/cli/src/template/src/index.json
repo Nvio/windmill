@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "@windmillcss/template",
   "components": [
     {
       "name": "Your First Component",
