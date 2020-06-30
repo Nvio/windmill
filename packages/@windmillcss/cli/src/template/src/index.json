@@ -1,0 +1,9 @@
+{
+  "name": "template",
+  "components": [
+    {
+      "name": "Your First Component",
+      "path": "./marketing-card.html"
+    }
+  ]
+}

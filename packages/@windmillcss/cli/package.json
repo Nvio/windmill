@@ -9,6 +9,8 @@
   "dependencies": {
     "@windmillcss/client": "latest",
     "@windmillcss/server": "latest",
-    "commander": "^5.1.0"
+    "commander": "^5.1.0",
+    "ncp": "^2.0.0",
+    "prettier": "^2.0.5"
   }
 }
