@@ -1390,10 +1390,10 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@windmillcss/cli@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@windmillcss/cli/-/cli-0.1.7.tgz#4c09eb88d13bdd70071f225e9996a9d55cf840a5"
-  integrity sha512-gMmMn2uqWOn3dr6uwd3CCGuoQ2Xl7h8Le3xadn9objgnICHD6T2CLX0CRyjw4fVNReK+s9/o/WD5XObd2fZW4g==
+"@windmillcss/cli@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@windmillcss/cli/-/cli-0.1.8.tgz#b4efa9ba0237e5220f9d04449a5baa08d3ca45d6"
+  integrity sha512-RkBg8Uhowuqsuy9rleXNkVCz+UBwgmx4mDqEn9IyNU1I0s6GY5xJoe3OwH+/r8/yoQzB8EInR1IVyQIgsMkdzw==
   dependencies:
     "@windmillcss/client" latest
     "@windmillcss/server" latest
