@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "windmill": "windmill",
     "windmill:dev": "windmill dev"
   },
   "dependencies": {

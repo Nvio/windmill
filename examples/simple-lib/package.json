@@ -4,6 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "windmill": "windmill",
     "windmill:dev": "windmill dev"
   },
   "dependencies": {
