@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <div v-if="metadata" class="w-screen h-screen flex">
-      <div
-        class="w-1/4 bg-gray-100 h-full border-r shadow-md flex flex-col justify-between"
-      >
+      <div class="w-1/4 bg-gray-100 h-full border-r shadow-md flex flex-col justify-between">
         <div>
           <div class="border-b py-2 text-center">
             <router-link to="/">
@@ -36,8 +34,10 @@
         </div>
       </div>
 
-      <div class="w-3/4">
-        <router-view />
+      <div class="w-3/4 max-h-screen overflow-y-scroll">
+        <div class="py-6">
+          <router-view />
+        </div>
       </div>
     </div>
   </div>
@@ -54,6 +54,6 @@ export default {
     });
   },
 
-  computed: mapState(["metadata"]),
+  computed: mapState(["metadata"])
 };
 </script>
