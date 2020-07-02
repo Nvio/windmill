@@ -17,7 +17,7 @@
 export default {
   data: () => ({
     isDragging: false,
-    startX: null
+    startX: null,
   }),
   mounted() {
     window.addEventListener("mousemove", this.move);
@@ -39,7 +39,7 @@ export default {
     move(e) {
       if (!this.isDragging) return null;
       this.$emit("resize", e.clientX - this.startX);
-    }
-  }
+    },
+  },
 };
 </script>

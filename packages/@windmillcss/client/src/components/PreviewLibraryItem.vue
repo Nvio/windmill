@@ -7,12 +7,16 @@
       class="w-full h-auto bg-white pointer-events-none"
       :class="{
         'pointer-events-none': isResizing,
-        'pointer-events-auto': !isResizing
+        'pointer-events-auto': !isResizing,
       }"
       :style="{ width, height }"
     />
 
-    <ResizeHandle @resize="resize" @end="endResize" :style="{ right: `${-change}px` }" />
+    <ResizeHandle
+      @resize="resize"
+      @end="endResize"
+      :style="{ right: `${-change}px` }"
+    />
   </div>
 </template>
 
@@ -25,7 +29,7 @@ export default {
     widthChange: 0,
     startingWidthChange: 0,
     height: "150px",
-    isResizing: false
+    isResizing: false,
   }),
   computed: {
     width() {
@@ -50,7 +54,7 @@ export default {
     change() {
       const change = this.startingWidthChange + this.widthChange;
       return change <= 0 ? change : 0;
-    }
+    },
   },
   methods: {
     updateHeight() {
@@ -72,13 +76,13 @@ export default {
       // disable iframe links
       this.$refs.preview.contentWindow.document.body
         .querySelectorAll("a")
-        .forEach(element => {
-          element.addEventListener("click", e => {
+        .forEach((element) => {
+          element.addEventListener("click", (e) => {
             e.preventDefault();
           });
         });
-    }
+    },
   },
-  components: { ResizeHandle }
+  components: { ResizeHandle },
 };
 </script>

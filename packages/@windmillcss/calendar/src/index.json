@@ -1,6 +1,4 @@
 {
   "name": "@windmillcss/calendar",
-  "components": [
-    { "name": "Your First Component", "path": "./marketing-card.html" }
-  ]
+  "components": [{ "name": "Calendar", "path": "./calendar.html" }]
 }

@@ -35,7 +35,7 @@ export default {
 
   data: () => ({
     mode: "preview",
-    hasRecentlyCopied: false
+    hasRecentlyCopied: false,
   }),
 
   methods: {
@@ -43,9 +43,9 @@ export default {
       this.hasRecentlyCopied = true;
       this.$copyText(this.code);
       setTimeout(() => (this.hasRecentlyCopied = false), 1000);
-    }
+    },
   },
 
-  components: { ToggleButton, PreviewLibrabryItem, WhiteButton, Code }
+  components: { ToggleButton, PreviewLibrabryItem, WhiteButton, Code },
 };
 </script>

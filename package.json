@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "author": "Steven Yung <nvio@fastmail.com>",
   "license": "MIT",
+  "scripts": {
+    "format": "prettier --write '**/*.{js,vue,html,json}'"
+  },
   "devDependencies": {
     "lerna": "^3.20.2",
     "prettier": "^2.0.5"

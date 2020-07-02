@@ -1,4 +1,4 @@
-const path = require('path');
-const nodemon = require('nodemon');
+const path = require("path");
+const nodemon = require("nodemon");
 
-nodemon(path.join(__dirname, '..', 'index.js'))
+nodemon(path.join(__dirname, "..", "index.js"));

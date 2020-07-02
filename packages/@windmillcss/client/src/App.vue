@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <div v-if="metadata" class="w-screen h-screen flex">
-      <div class="w-1/4 bg-gray-100 h-full border-r shadow-md flex flex-col justify-between">
+      <div
+        class="w-1/4 bg-gray-100 h-full border-r shadow-md flex flex-col justify-between"
+      >
         <div>
           <div class="border-b py-2 text-center">
             <router-link to="/">
@@ -14,12 +16,12 @@
               v-for="(component, key) in metadata.components"
               :key="key"
               :to="component.fileName"
-              v-slot="{href, navigate, isActive}"
+              v-slot="{ href, navigate, isActive }"
             >
               <a :href="href" @click="navigate">
                 <li
                   class="text-gray-500 w-full rounded-md px-2 py-1 mb-2"
-                  :class="{'bg-blue-200 text-blue-600': isActive}"
+                  :class="{ 'bg-blue-200 text-blue-600': isActive }"
                 >
                   <font-awesome-icon icon="file" class="mr-2" />
                   <span>{{ component.name }}</span>
@@ -52,6 +54,6 @@ export default {
     });
   },
 
-  computed: mapState(["metadata"])
+  computed: mapState(["metadata"]),
 };
 </script>

@@ -8,6 +8,6 @@
 import Prism from "vue-prism-component";
 
 export default {
-  components: { Prism }
+  components: { Prism },
 };
 </script>
