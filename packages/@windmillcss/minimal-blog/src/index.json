@@ -1,7 +1,8 @@
 {
-  "name": "tailwind-blog",
+  "name": "@windmillcss/minimal-blog",
   "components": [
     { "name": "Profile Card", "path": "./profile-card.html" },
-    { "name": "Post", "path": "./post.html" }
+    { "name": "Post", "path": "./post.html" },
+    { "name": "Homepage", "path": "./homepage.html" }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-blog",
+  "name": "@windmillcss/minimal-blog",
   "version": "0.1.8",
   "license": "MIT",
   "scripts": {
