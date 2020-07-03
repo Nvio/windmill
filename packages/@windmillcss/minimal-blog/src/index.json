@@ -1,0 +1,7 @@
+{
+  "name": "tailwind-blog",
+  "components": [
+    { "name": "Profile Card", "path": "./profile-card.html" },
+    { "name": "Post", "path": "./post.html" }
+  ]
+}

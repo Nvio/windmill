@@ -1,0 +1,11 @@
+{
+  "name": "tailwind-blog",
+  "version": "0.1.8",
+  "license": "MIT",
+  "scripts": {
+    "windmill": "windmill"
+  },
+  "dependencies": {
+    "@windmillcss/cli": "^0.1.8"
+  }
+}
