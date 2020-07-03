@@ -4,6 +4,7 @@ const fs = require("fs");
 const request = require("request");
 const postcss = require("postcss");
 const chokidar = require("chokidar");
+const nunjucks = require("nunjucks");
 
 const app = express();
 const port = 9991;
@@ -20,7 +21,7 @@ app.get("/", (req, res) => {
     return {
       name,
       fileName: path.basename(filePath),
-      content: fs.readFileSync(path.join(dirPath, filePath)).toString(),
+      content: nunjucks.render(path.join(dirPath, filePath)),
     };
   });
 
