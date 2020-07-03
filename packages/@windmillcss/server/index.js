@@ -13,6 +13,7 @@ const http = require("http").createServer(app);
 const io = require("socket.io")(http);
 
 const dirPath = path.join(process.cwd(), "src");
+nunjucks.configure(dirPath, { noCache: true });
 
 app.get("/", (req, res) => {
   const metadata = { ...require(dirPath) };
