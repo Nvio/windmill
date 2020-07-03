@@ -29,12 +29,12 @@ async function create(projectName) {
 
   modify("package.json", (data) => {
     data.name = projectName;
+    data.version = "1.0.0";
     return data;
   });
 
   modify("src/index.json", (data) => {
     data.name = projectName;
-    data.version = "1.0.0";
     return data;
   });
 
