@@ -14,7 +14,7 @@
               :value="currentRefinement"
               @input="refine($event.currentTarget.value)"
             />
-            <div v-if="currentRefinement" class="absolute w-full border rounded mt-1">
+            <div v-if="currentRefinement" class="absolute w-full border rounded mt-1 shadow-md">
               <ul v-for="index in indices" :key="index.label">
                 <li>
                   <ul>
@@ -23,14 +23,14 @@
                       :key="hit.objectID"
                       class="bg-white py-3 px-2 w-full border-b hover:bg-gray-100 cursor-pointer"
                     >
-                      <div class="flex flex-col">
-                        <span class="font-semibold">
+                      <div>
+                        <p class="font-semibold">
                           <ais-highlight attribute="packageName" :hit="hit" />
-                        </span>
+                        </p>
 
-                        <span>
+                        <p>
                           <ais-highlight attribute="description" :hit="hit" />
-                        </span>
+                        </p>
                       </div>
                     </li>
                   </ul>
