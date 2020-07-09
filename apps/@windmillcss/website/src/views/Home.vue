@@ -1,20 +1,20 @@
 <template>
-  <Header />
+  <Layout />
 </template>
 
 <script>
-import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 import db from "@/db.js";
 
 export default {
   data: () => ({
-    packages: [],
+    packages: []
   }),
 
   firestore: {
-    packages: db.collection("packages"),
+    packages: db.collection("packages")
   },
 
-  components: { Header },
+  components: { Layout }
 };
 </script>

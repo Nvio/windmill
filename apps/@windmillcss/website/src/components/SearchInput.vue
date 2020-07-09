@@ -23,15 +23,17 @@
                       :key="hit.objectID"
                       class="bg-white py-3 px-2 w-full border-b hover:bg-gray-100 cursor-pointer"
                     >
-                      <div>
-                        <p class="font-semibold">
-                          <ais-highlight attribute="packageName" :hit="hit" />
-                        </p>
+                      <router-link :to="hit.packageName">
+                        <div>
+                          <p class="font-semibold">
+                            <ais-highlight attribute="packageName" :hit="hit" />
+                          </p>
 
-                        <p>
-                          <ais-highlight attribute="description" :hit="hit" />
-                        </p>
-                      </div>
+                          <p>
+                            <ais-highlight attribute="description" :hit="hit" />
+                          </p>
+                        </div>
+                      </router-link>
                     </li>
                   </ul>
                 </li>
