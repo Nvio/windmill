@@ -7,6 +7,14 @@ module.exports = {
           type: String,
           required: true,
         },
+        VUE_APP_ALGOLIA_APP_ID: {
+          type: String,
+          required: true,
+        },
+        VUE_APP_ALGOLIA_API_KEY: {
+          type: String,
+          required: true,
+        },
       },
     },
   },
