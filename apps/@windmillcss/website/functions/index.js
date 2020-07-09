@@ -20,8 +20,11 @@ exports.addToIndex = functions.firestore
   .onCreate((snapshot) => {
     const data = snapshot.data();
     const objectID = snapshot.id;
-
-    return index.saveObject({ ...data, objectID });
+    return index.saveObject({
+      ...data,
+      packageName: `${data.owner}/${data.name}`,
+      objectID,
+    });
   });
 
 exports.updateIndex = functions.firestore
@@ -29,8 +32,11 @@ exports.updateIndex = functions.firestore
   .onUpdate((change) => {
     const newData = change.after.data();
     const objectID = change.after.id;
-
-    return index.saveObject({ ...newData, objectID });
+    return index.saveObject({
+      ...newData,
+      packageName: `${newData.owner}/${newData.name}`,
+      objectID,
+    });
   });
 
 exports.deleteFromIndex = functions.firestore
