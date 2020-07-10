@@ -1379,6 +1379,16 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
+"@windmillcss/shared@latest":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@windmillcss/shared/-/shared-0.1.9.tgz#afa7c741ed28db96efe82e03c0943ddda8ba9539"
+  integrity sha512-7g47+r3/IZRwxtQc7fbuQ6NPRakJot5LVzyfi982+LHT85p4pu9OlsS8qq2sEhyKWWVcVEZ9GZUbHLFi4Y321Q==
+  dependencies:
+    core-js "^3.6.5"
+    prismjs "^1.20.0"
+    vue "^2.6.11"
+    vue-prism-component "^1.2.0"
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"

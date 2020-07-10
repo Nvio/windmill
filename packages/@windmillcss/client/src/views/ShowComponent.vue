@@ -7,19 +7,19 @@
 </template>
 
 <script>
-import PreviewLibraryItem from "@/components/PreviewLibraryItem";
+import { PreviewLibraryItem } from "@windmillcss/shared";
 
 export default {
   sockets: {
     change() {
       location.reload();
-    },
+    }
   },
   computed: {
     metadata() {
       return this.$store.getters.getComponent(this.$route.params.fileName);
-    },
+    }
   },
-  components: { PreviewLibraryItem },
+  components: { PreviewLibraryItem }
 };
 </script>

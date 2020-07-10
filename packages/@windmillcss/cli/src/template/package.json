@@ -7,5 +7,6 @@
   },
   "dependencies": {
     "@windmillcss/cli": "^0.1.9"
-  }
+  },
+  "gitHead": "65fc0e24cd0943fbfc7cf57004a513502709b9a9"
 }

@@ -17,6 +17,7 @@
     "@vue/cli-plugin-vuex": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
     "@vue/eslint-config-prettier": "^6.0.0",
+    "@windmillcss/shared": "latest",
     "axios": "^0.19.2",
     "babel-eslint": "^10.1.0",
     "core-js": "^3.6.5",
@@ -48,5 +49,5 @@
       "git add"
     ]
   },
-  "gitHead": "8cedd4e134a8251047685070f717c838bef372d1"
+  "gitHead": "65fc0e24cd0943fbfc7cf57004a513502709b9a9"
 }

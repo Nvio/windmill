@@ -1,7 +1,6 @@
 {
   "name": "@windmillcss/shared",
   "version": "0.1.9",
-  "private": false,
   "main": "./dist/@windmillcss/shared.common.js",
   "files": [
     "dist/*",
@@ -48,5 +47,6 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "gitHead": "65fc0e24cd0943fbfc7cf57004a513502709b9a9"
 }

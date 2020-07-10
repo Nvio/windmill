@@ -5,7 +5,7 @@ import ResizeHandle from "./components/ResizeHandle";
 import ToggleButton from "./components/ToggleButton";
 import WhiteButton from "./components/WhiteButton";
 
-export default {
+export {
   Code,
   LibraryItem,
   PreviewLibraryItem,
