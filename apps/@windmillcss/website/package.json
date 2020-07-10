@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@tailwindcss/ui": "^0.3.0",
+    "@windmillcss/shared": "^0.1.9",
     "algoliasearch": "^4.3.0",
+    "axios": "^0.19.2",
     "core-js": "^3.6.5",
     "firebase": "^7.15.5",
     "instantsearch.css": "^7.4.2",

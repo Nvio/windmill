@@ -45,7 +45,7 @@ export default {
             <meta name="viewport" content="width=device-width,initial-scale=1.0">
             <link href="http://localhost:9991/styles.css" rel="stylesheet">
           </head>
-          <body class="py-4 px-2">
+          <body style="padding-top: 1rem; padding-bottom: 1rem; padding-right: 0.5rem; padding-left: 0.5rem;">
             ${this.code}
           </body>
         </html>
