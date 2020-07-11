@@ -1,7 +1,11 @@
 <template>
   <Layout>
     <template v-if="metadata">
-      <div v-for="component in metadata.components" :key="component.name" class="py-4">
+      <div
+        v-for="component in metadata.components"
+        :key="component.name"
+        class="py-4 z-0"
+      >
         <LibraryItem :name="component.name" :code="component.code" />
       </div>
     </template>
@@ -25,10 +29,10 @@ export default {
       .then(({ data: { components, ...metadata } }) => {
         this.metadata = {
           ...metadata,
-          components: []
+          components: [],
         };
 
-        components.forEach(component => {
+        components.forEach((component) => {
           const [dir] = index.split("/");
           const filePath = path.join(dir, component.path);
 
@@ -40,15 +44,15 @@ export default {
   },
 
   data: () => ({
-    metadata: null
+    metadata: null,
   }),
 
   computed: {
     fullName() {
       return `${this.$route.params.owner}/${this.$route.params.name}`;
-    }
+    },
   },
 
-  components: { Layout, LibraryItem }
+  components: { Layout, LibraryItem },
 };
 </script>
